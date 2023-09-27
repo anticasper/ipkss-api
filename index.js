@@ -1,9 +1,12 @@
 require('dotenv').config()
 const express = require('express')
-let app = express()
 const port = process.env.APP_PORT | 4000
 
+let app = express()
+
 const setupRoutes = require('./src/config/setupRoutes')
+
+app.use(express.json())
 
 app = setupRoutes.loadRoutes(app)
 
