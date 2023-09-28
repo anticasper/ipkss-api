@@ -54,6 +54,10 @@ const withdraw = (object) => {
     return false
   }
 
+  if (data.balance < object.amount) {
+    return false
+  }
+
   dbo.withdraw(object.origin, object.amount)
 
   data = dbo.get(object.origin)
