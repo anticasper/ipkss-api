@@ -9,6 +9,15 @@ const loadRoutes = (app) => {
     const routes = require(routePath + file)
     app = routes.add(app)
   }
+
+  app.route('/').get((req, res) => {
+    res.sendStatus(200)
+  })
+
+  app.route('*').all((req, res) => {
+    res.sendStatus(404)
+  })
+
   return app
 }
 
