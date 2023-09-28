@@ -30,6 +30,15 @@ Para iniciar o aplicativo, use o seguinte comando:
 npm run start
 ```
 
+
+## Testes
+
+Para rodar a suite de testes Jest, execute o seguinte comando:
+
+```bash
+npm run test
+```
+
 ## Contato
 
 Se você tiver dúvidas, sugestões ou precisar de ajuda, fique à vontade para entrar em contato.
